@@ -165,7 +165,8 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
         if (intLength == intCount) {
             //テスト状態を「終了」にしてメッセージを表示
             intState == TEST_FINISHED
-            textViewMessage.text = "テスト終了"
+//            textViewMessage.text = "テスト終了"
+            textViewMessage2.text = "テスト終了"
 
             //ボタン①を見えない＆使えない状態に
             buttonNext.isEnabled = false
