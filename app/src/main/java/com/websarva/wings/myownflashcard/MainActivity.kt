@@ -1,14 +1,19 @@
 package com.websarva.wings.myownflashcard
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
 var intBackgroundColor = 0
 
 class MainActivity : AppCompatActivity() {
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,26 +29,50 @@ class MainActivity : AppCompatActivity() {
         button01.setOnClickListener {
             intBackgroundColor = R.color.color01
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
+
+            TextColor.setColor(R.color.color02)
+            val textView = findViewById<TextView>(R.id.textView)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
         button02.setOnClickListener {
             intBackgroundColor = R.color.color02
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
+
+            TextColor.setColor(R.color.color03)
+            val textView = findViewById<TextView>(R.id.textView)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
         button03.setOnClickListener {
             intBackgroundColor  = R.color.color03
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
+
+            TextColor.setColor(R.color.color04)
+            val textView = findViewById<TextView>(R.id.textView)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
         button04.setOnClickListener {
             intBackgroundColor  = R.color.color04
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
+
+            TextColor.setColor(R.color.color05)
+            val textView = findViewById<TextView>(R.id.textView)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
         button05.setOnClickListener {
             intBackgroundColor  = R.color.color05
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
+
+            TextColor.setColor(R.color.color06)
+            val textView = findViewById<TextView>(R.id.textView)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
         button06.setOnClickListener {
             intBackgroundColor  = R.color.color06
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
+
+            TextColor.setColor(R.color.color01)
+            val textView = findViewById<TextView>(R.id.textView)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
 
         //「かくにんテスト」ボタンを押した場合
