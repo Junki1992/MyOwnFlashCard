@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
             TextColor.setColor(R.color.color06)
-            val textView = findViewById<TextView>(R.id.textView)
+            val textView = findViewById<TextView>(R.id.textViewWx)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
             radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
             TextColor.setColor(R.color.color06)
-            val textView = findViewById<TextView>(R.id.textView)
+            val textView = findViewById<TextView>(R.id.textViewWx)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
             radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
             TextColor.setColor(R.color.color06)
-            val textView = findViewById<TextView>(R.id.textView)
+            val textView = findViewById<TextView>(R.id.textViewWx)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
             radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
             TextColor.setColor(R.color.color06)
-            val textView = findViewById<TextView>(R.id.textView)
+            val textView = findViewById<TextView>(R.id.textViewWx)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
             radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
             TextColor.setColor(R.color.color06)
-            val textView = findViewById<TextView>(R.id.textView)
+            val textView = findViewById<TextView>(R.id.textViewWx)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
             radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
             TextColor.setColor(R.color.color02)
-            val textView = findViewById<TextView>(R.id.textView)
+            val textView = findViewById<TextView>(R.id.textViewWx)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
             radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))

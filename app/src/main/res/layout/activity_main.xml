@@ -37,14 +37,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="90dp"
         android:background="@drawable/image_button_edit"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewWx"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonTest" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewWx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"

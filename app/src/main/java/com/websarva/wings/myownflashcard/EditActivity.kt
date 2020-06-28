@@ -50,7 +50,7 @@ class EditActivity : AppCompatActivity() {
             TextColor.setColor(R.color.color02)
             textView2.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             textView5.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
-            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            textViewWx.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             editTextQuestion.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             editTextAnswer.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }

@@ -1,6 +1,5 @@
 package com.websarva.wings.myownflashcard
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,7 +7,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import io.realm.Realm
 import io.realm.RealmResults
-import kotlinx.android.synthetic.main.activity_edit.*
 import kotlinx.android.synthetic.main.activity_test.*
 import java.util.*
 
@@ -50,7 +48,7 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
         //文字色の設定（背景が黒の場合）
         if (intBackgroundColor == R.color.color06) {
             TextColor.setColor(R.color.color02)
-            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            textViewWx.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             textViewRemaining.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             checkBox.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
