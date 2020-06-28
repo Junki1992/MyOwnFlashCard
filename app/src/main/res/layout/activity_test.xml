@@ -7,129 +7,164 @@
     android:layout_height="match_parent"
     tools:context=".TestActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_title_test" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/image_title_test" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+                <TextView
+                    android:id="@+id/textViewWx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="残り問題数" />
+
+                <TextView
+                    android:id="@+id/textViewRemaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewFlashQuestion"
+                android:layout_width="320dp"
+                android:layout_height="136dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewMessage"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMessage"
+                app:layout_constraintStart_toStartOf="@+id/textViewMessage"
+                app:srcCompat="@drawable/image_flash_question" />
+
+            <TextView
+                android:id="@+id/textViewFlashQutstion"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="120dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewFlashQuestion"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewFlashQuestion"
+                app:layout_constraintStart_toStartOf="@+id/imageViewFlashQuestion"
+                app:layout_constraintTop_toTopOf="@+id/imageViewFlashQuestion" />
+
+            <ImageView
+                android:id="@+id/imageViewFlashAnswer"
+                android:layout_width="320dp"
+                android:layout_height="136dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="120dp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMessage"
+                app:layout_constraintStart_toStartOf="@+id/textViewMessage"
+                app:layout_constraintTop_toTopOf="@+id/textViewMessage"
+                app:srcCompat="@drawable/image_flash_answer" />
+
+            <TextView
+                android:id="@+id/textViewFlashAnswer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="120dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewFlashAnswer"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewFlashAnswer"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageViewFlashAnswer"
+                app:layout_constraintTop_toTopOf="@+id/imageViewFlashAnswer"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/image_button_go_next_question"
+                app:layout_constraintStart_toStartOf="@+id/checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <Button
+                android:id="@+id/buttonEndOfTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/image_button_end_test"
+                app:layout_constraintStart_toStartOf="@+id/buttonNext"
+                app:layout_constraintTop_toBottomOf="@+id/buttonNext" />
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="暗記済にする場合はチェックを入れて下さい"
+                app:layout_constraintStart_toStartOf="@+id/imageViewFlashAnswer"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewFlashAnswer" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
-            android:id="@+id/textViewWx"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="残り問題数" />
+            android:id="@+id/textViewMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="40sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textViewRemaining"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="0"
-            android:textSize="24sp" />
-    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageViewFlashQuestion"
-        android:layout_width="320dp"
-        android:layout_height="136dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewMessage"
-        app:layout_constraintEnd_toStartOf="@+id/textViewMessage"
-        app:layout_constraintStart_toStartOf="@+id/textViewMessage"
-        app:srcCompat="@drawable/image_flash_question" />
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/textViewFlashQutstion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="120dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewFlashQuestion"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewFlashQuestion"
-        app:layout_constraintStart_toStartOf="@+id/imageViewFlashQuestion"
-        app:layout_constraintTop_toTopOf="@+id/imageViewFlashQuestion" />
 
-    <ImageView
-        android:id="@+id/imageViewFlashAnswer"
-        android:layout_width="320dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="120dp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewMessage"
-        app:layout_constraintStart_toStartOf="@+id/textViewMessage"
-        app:layout_constraintTop_toTopOf="@+id/textViewMessage"
-        app:srcCompat="@drawable/image_flash_answer" />
 
-    <TextView
-        android:id="@+id/textViewFlashAnswer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="120dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewFlashAnswer"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewFlashAnswer"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageViewFlashAnswer"
-        app:layout_constraintTop_toTopOf="@+id/imageViewFlashAnswer"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="21dp"
-        android:background="@drawable/image_button_go_next_question"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
-    <Button
-        android:id="@+id/buttonEndOfTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:background="@drawable/image_button_end_test"
-        app:layout_constraintStart_toStartOf="@+id/buttonNext"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNext" />
-
-    <TextView
-        android:id="@+id/textViewMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="暗記済にする場合はチェックを入れて下さい"
-        app:layout_constraintStart_toStartOf="@+id/imageViewFlashAnswer"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewFlashAnswer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
