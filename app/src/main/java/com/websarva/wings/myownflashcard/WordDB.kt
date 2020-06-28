@@ -1,0 +1,21 @@
+package com.websarva.wings.myownflashcard
+
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+
+//モデルクラスの作成
+open class WordDB: RealmObject() {
+    //フィールドの設定
+
+    //問題
+    @PrimaryKey
+   open var strQuestion: String = ""
+
+    //答え
+   open var strAnswer: String = ""
+
+    //暗記済フラグ
+    open var boolMemoryFrag: Boolean = false
+
+    //単語帳DBに暗記済フラグフィールドと主キーを設定
+}
