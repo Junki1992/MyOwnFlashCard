@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import io.realm.Realm
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.activity_edit.*
@@ -45,6 +46,14 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
 
         //前の画面で設定した背景色を設定
         constraintLayoutTest.setBackgroundResource(intBackgroundColor)
+
+        //文字色の設定（背景が黒の場合）
+        if (intBackgroundColor == R.color.color06) {
+            TextColor.setColor(R.color.color02)
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            textViewRemaining.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            checkBox.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+        }
 
         //テスト状態を「開始前」に＋画像非表示
         intState = BEFORE_START

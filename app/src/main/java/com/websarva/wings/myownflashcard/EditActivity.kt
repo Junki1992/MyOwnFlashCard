@@ -1,10 +1,10 @@
 package com.websarva.wings.myownflashcard
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import io.realm.Realm
 import io.realm.exceptions.RealmPrimaryKeyConstraintException
 import kotlinx.android.synthetic.main.activity_edit.*
@@ -44,6 +44,16 @@ class EditActivity : AppCompatActivity() {
 
         //前の画面で設定した背景色の設定
         constraintLayoutEdit.setBackgroundResource(intBackgroundColor)
+
+        //文字色の設定（背景が黒の場合）
+        if (intBackgroundColor == R.color.color06) {
+            TextColor.setColor(R.color.color02)
+            textView2.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            textView5.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            editTextQuestion.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            editTextAnswer.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+        }
 
         //登録ボタンを押した時
         buttonRegister.setOnClickListener {

@@ -2,7 +2,6 @@ package com.websarva.wings.myownflashcard
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -25,38 +24,46 @@ class MainActivity : AppCompatActivity() {
         }
 
         //「色」ボタンを押した場合
-        //画面の背景色をボタンの色に設定
+        //画面の背景色と文字色をボタンの色に設定
         button01.setOnClickListener {
             intBackgroundColor = R.color.color01
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
-            TextColor.setColor(R.color.color02)
+            TextColor.setColor(R.color.color06)
             val textView = findViewById<TextView>(R.id.textView)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
+            radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
         }
         button02.setOnClickListener {
             intBackgroundColor = R.color.color02
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
-            TextColor.setColor(R.color.color03)
+            TextColor.setColor(R.color.color06)
             val textView = findViewById<TextView>(R.id.textView)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
+            radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
         }
         button03.setOnClickListener {
             intBackgroundColor  = R.color.color03
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
-            TextColor.setColor(R.color.color04)
+            TextColor.setColor(R.color.color06)
             val textView = findViewById<TextView>(R.id.textView)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
+            radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
         }
         button04.setOnClickListener {
             intBackgroundColor  = R.color.color04
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
-            TextColor.setColor(R.color.color05)
+            TextColor.setColor(R.color.color06)
             val textView = findViewById<TextView>(R.id.textView)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
+            radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
         }
         button05.setOnClickListener {
             intBackgroundColor  = R.color.color05
@@ -65,14 +72,18 @@ class MainActivity : AppCompatActivity() {
             TextColor.setColor(R.color.color06)
             val textView = findViewById<TextView>(R.id.textView)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
+            radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
         }
         button06.setOnClickListener {
             intBackgroundColor  = R.color.color06
             ConstraintLayoutMain.setBackgroundResource(intBackgroundColor)
 
-            TextColor.setColor(R.color.color01)
+            TextColor.setColor(R.color.color02)
             val textView = findViewById<TextView>(R.id.textView)
             textView.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            radioButton.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
+            radioButton2.setTextColor(ContextCompat.getColor(applicationContext, TextColor.getColor()))
         }
 
         //「かくにんテスト」ボタンを押した場合

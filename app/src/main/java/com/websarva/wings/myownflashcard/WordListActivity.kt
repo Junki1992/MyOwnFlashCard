@@ -19,6 +19,7 @@ class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
     lateinit var results: RealmResults<WordDB>
     lateinit var word_list: ArrayList<String>
     lateinit var adapter: ArrayAdapter<String>
+
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_word_list)
