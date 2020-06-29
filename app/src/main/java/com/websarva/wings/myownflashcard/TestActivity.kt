@@ -51,6 +51,7 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
             textViewWx.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             textViewRemaining.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
             checkBox.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
+            textViewMessage2.setTextColor(ContextCompat.getColor(applicationContext,TextColor.getColor()))
         }
 
         //テスト状態を「開始前」に＋画像非表示
