@@ -2,15 +2,15 @@ package com.websarva.wings.myownflashcard
 
 import android.app.Application
 
-class TextColor: Application() {
+class BackgroundColor: Application() {
     var color: Int = R.color.color02
 
     companion object {
-        private var instance : TextColor? = null
+        private var instance : BackgroundColor? = null
 
-        private fun getInstance(): TextColor {
+        private fun getInstance(): BackgroundColor {
             if (instance == null)
-                instance = TextColor()
+                instance = BackgroundColor()
 
             return instance!!
         }
