@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import io.realm.Realm
 import io.realm.RealmResults
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_word_list.*
 
 class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
@@ -20,7 +19,7 @@ class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
     lateinit var word_list: ArrayList<String>
     lateinit var adapter: ArrayAdapter<String>
 
-        override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_word_list)
 
@@ -44,24 +43,24 @@ class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
             finish()
         }
 
-            //暗記済は下に」ボタンを押した場合
-            //暗記済フラグが立っているものを下にソート
-            buttonSort.setOnClickListener {
-                results = realm.where<WordDB>(WordDB::class.java).findAll().sort(getString(R.string.db_field_memory_frag))
+        //暗記済は下に」ボタンを押した場合
+        //暗記済フラグが立っているものを下にソート
+        buttonSort.setOnClickListener {
+            results = realm.where<WordDB>(WordDB::class.java).findAll()
+                .sort(getString(R.string.db_field_memory_frag))
 
-                //一旦表示しているword_listをクリア（下に重なって表示されるのを防ぐため）
-                word_list.clear()
+            //一旦表示しているword_listをクリア（下に重なって表示されるのを防ぐため）
+            word_list.clear()
 
-                results.forEach {
-                    if (it.boolMemoryFrag) {
-                        word_list.add(it.strAnswer + ":" + it.strQuestion + "【暗記済】")
-                    }
-                    else {
-                        word_list.add(it.strAnswer + " : " + it.strQuestion)
-                    }
+            results.forEach {
+                if (it.boolMemoryFrag) {
+                    word_list.add(it.strAnswer + ":" + it.strQuestion + "【暗記済】")
+                } else {
+                    word_list.add(it.strAnswer + " : " + it.strQuestion)
                 }
-                listView.adapter = adapter
             }
+            listView.adapter = adapter
+        }
 
 
         //リストのクリックリスナー
@@ -77,7 +76,8 @@ class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
         realm = Realm.getDefaultInstance()
 
         //DBに登録している単語を一覧表示（ListView）
-        results = realm.where(WordDB::class.java).findAll().sort(getString(R.string.db_field_answer))
+        results =
+            realm.where(WordDB::class.java).findAll().sort(getString(R.string.db_field_answer))
 
         //for文を使ってリストの表示形式を修正する
         //暗記済のものは「【暗記済】」と表示
@@ -94,13 +94,27 @@ class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
         results.forEach {
             if (it.boolMemoryFrag) {
                 word_list.add(it.strAnswer + ":" + it.strQuestion + "【暗記済】")
-            }
-            else {
+            } else {
                 word_list.add(it.strAnswer + " : " + it.strQuestion)
             }
         }
 
-        adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, word_list)
+        if (BackgroundColor.getColor() == R.color.color01) {
+            adapter = ArrayAdapter(this, R.layout.activity_list_color01, word_list)
+        } else if (BackgroundColor.getColor() == R.color.color02) {
+            adapter = ArrayAdapter(this, R.layout.activity_list_color02, word_list)
+        } else if (BackgroundColor.getColor() == R.color.color03) {
+            adapter = ArrayAdapter(this, R.layout.activity_list_color03, word_list)
+        } else if (BackgroundColor.getColor() == R.color.color04) {
+            adapter = ArrayAdapter(this, R.layout.activity_list_color04, word_list)
+        } else if (BackgroundColor.getColor() == R.color.color05) {
+            adapter = ArrayAdapter(this, R.layout.activity_list_color05, word_list)
+        } else if (BackgroundColor.getColor() == R.color.color06) {
+            adapter = ArrayAdapter(this, R.layout.activity_list_color06, word_list)
+        } else {
+            adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, word_list)
+        }
+
         listView.adapter = adapter
     }
 
@@ -124,12 +138,20 @@ class WordListActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
             putExtra(getString(R.string.intent_key_question), strSelectedQuestion)  //問題
             putExtra(getString(R.string.intent_key_answer), strSelectedAnswer)  //答え
             putExtra(getString(R.string.intent_key_position), position)  //行番号
-            putExtra(getString(R.string.intent_key_status), getString(R.string.status_change))  //ステータス
+            putExtra(
+                getString(R.string.intent_key_status),
+                getString(R.string.status_change)
+            )  //ステータス
         }
         startActivity(intent)
     }
 
-    override fun onItemLongClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long): Boolean {
+    override fun onItemLongClick(
+        parent: AdapterView<*>?,
+        view: View?,
+        position: Int,
+        id: Long
+    ): Boolean {
 
         //長押しした項目をDBから取得
         val selectedDB = results[position]!!
